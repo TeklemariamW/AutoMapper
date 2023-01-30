@@ -19,7 +19,11 @@ builder.Services.AddDbContext<WsApplicationDbContext>(options =>
 options.UseSqlite(connectionString));
 
 builder.Services.AddScoped<ICommandRepo, CommandRepo>();
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
+/*
+https://www.youtube.com/watch?v=5YB49OEmbbE
+1:30:00
+*/
 //builder.Services.AddDbContext<WsApplicationDbContext>(opt =>
   //  opt.UseSqlServer(sqlConBuilder.ConnectionString));
 
